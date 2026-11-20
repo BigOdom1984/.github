@@ -1,0 +1,64 @@
+name: Founder Directive
+description: A directive from the Founder — the task, the proof required, the acceptance test, and the boundaries.
+title: "[Directive] "
+labels: ["founder-directive", "status: queued"]
+body:
+  - type: input
+    id: task_id
+    attributes:
+      label: Founder task ID
+      description: The ID for this directive, if one was given (for example FOUNDER-AI2AISYNC-...-001).
+      placeholder: FOUNDER-...
+    validations:
+      required: false
+  - type: dropdown
+    id: seat
+    attributes:
+      label: Assigned seat
+      description: Who owns this directive. Pick "Not assigned yet" if the seat is not named.
+      options:
+        - Not assigned yet
+        - AI-01 Onyx (General)
+        - AI-02 ChatGPT (Second)
+        - AI-03 Claude
+        - AI-04 Gemini
+        - AI-05 Cohere
+        - AI-06 NVIDIA
+        - AI-07 CloudFire AI
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: The directive
+      description: What is to be done, in plain words.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The reason behind it — what it fixes, proves, or makes possible.
+    validations:
+      required: false
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      description: What proof must be shown when the work is reported — commits, tests, read-backs, screenshots.
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance test
+      description: How anyone can tell the work is truly done. Be concrete.
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries
+      description: What is NOT authorized — anything that must not be touched, changed, merged, or spent.
+    validations:
+      required: false

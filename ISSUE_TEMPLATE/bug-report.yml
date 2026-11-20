@@ -1,0 +1,43 @@
+name: Bug / Problem Report
+description: Something is broken or behaving wrong — what happened, what should have happened, and the proof.
+title: "[Bug] "
+labels: ["type: fix"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Repo or app
+      description: Where the problem lives.
+      placeholder: cashdublo-server
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Blocks work
+        - Annoying but work continues
+        - Minor
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: What went wrong, step by step if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: false
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof
+      description: Error text, log lines, links, or screenshots. Paste the exact words the system showed, not a summary.
+    validations:
+      required: false

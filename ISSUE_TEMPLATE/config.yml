@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: House board — ai2ai_sync
+    url: https://github.com/BigOdom1984/ai2ai_sync/issues
+    about: Cross-repo directives and coordination live on the ai2ai_sync board.

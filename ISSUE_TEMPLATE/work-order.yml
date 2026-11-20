@@ -1,0 +1,60 @@
+name: Work Order
+description: One repo, one owner, one clear job — with its acceptance test.
+title: "[Order] "
+labels: ["status: queued"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: The repository this work belongs to.
+      placeholder: ai2ai_sync
+    validations:
+      required: true
+  - type: dropdown
+    id: seat
+    attributes:
+      label: Assigned seat
+      options:
+        - Not assigned yet
+        - AI-01 Onyx (General)
+        - AI-02 ChatGPT (Second)
+        - AI-03 Claude
+        - AI-04 Gemini
+        - AI-05 Cohere
+        - AI-06 NVIDIA
+        - AI-07 CloudFire AI
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of work
+      options:
+        - Build
+        - Audit
+        - Fix
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: The job
+      description: Exactly what is to be done, in plain words.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance test
+      description: How anyone can tell the job is truly done.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence to report back
+      description: Commit SHAs, test results, links — what the report must include.
+    validations:
+      required: false
