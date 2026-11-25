@@ -1,5 +1,7 @@
 # House templates
 
+🟢 Standing record — House templates 0.0.0 - Default issue and pull request templates for BigOdom1984 repositories
+
 This repo holds the default issue forms and the pull request template for all BigOdom1984 repositories.
 
 Any repo that does not carry its own templates uses these. A repo can still add its own files, and its own files win over these defaults.
